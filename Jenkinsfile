@@ -5,6 +5,10 @@ pipeline {
         IMAGE_NAME = "book-api:latest"
     }
 
+    tools {
+        maven 'M3'  // The name you configured
+    }
+
     stages {
         stage('Cloner le dépôt') {
             steps {
