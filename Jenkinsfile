@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git branch: 'main', url: 'https://github.com/tonuser/api-book.git'
+                git branch: 'main', url: 'https://github.com/ziedfathalli/book.git'
             }
         }
 
