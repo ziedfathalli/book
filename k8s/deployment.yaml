@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-api
+  template:
+    metadata:
+      labels:
+        app: book-api
+    spec:
+      containers:
+        - name: book-api
+          image: book-api:1.0   # Ton image locale
+          imagePullPolicy: Never  # Ne pas chercher sur Docker Hub
+          ports:
+            - containerPort: 8080
